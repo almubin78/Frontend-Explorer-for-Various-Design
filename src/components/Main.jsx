@@ -1,12 +1,13 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 
 
 const Main = () => {
     return (
         <div>
-            {
+           <div>
+             {
                 [
-                    {path:'/practiceOne',label:'Practice Area'},
+                    {path:'/practiceOne',label:'Navbars'},
                     {path:'/practiceTwo',label:'Practice Area 2'},
                 ].map((item)=>(
                     <NavLink
@@ -17,6 +18,11 @@ const Main = () => {
                     >{item.label}</NavLink>
                 ))
             }
+           </div>
+           {/* Outlet */}
+           <div>
+            <Outlet/>
+           </div>
         </div>
     );
 };
