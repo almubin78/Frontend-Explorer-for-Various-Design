@@ -1,0 +1,108 @@
+ 
+  [
+   
+    {
+      "_id": {
+        "$oid": "669e430492a4832d9e7f0811"
+      },
+      "name": "Muyin",
+      "email": "muyin001@gmail.com",
+      "password": "123a569@A",
+      "phone": "01776145656",
+      "collageName": "SKS School And Collage",
+      "imgLink": "https://i.ibb.co/MBQdTbG/muyin.jpg",
+      "class": "Eleven",
+      "subject": "ICT",
+      "fatherName": "Mamun",
+      "fatherContact": "01772393637",
+      "gOccupation": "Bussiness Man",
+      "isTeacher": false,
+      "isStudent": true,
+      "joinDate": "2024-07-12"
+    },
+    
+    {
+      "_id": {
+        "$oid": "669e4e99ba52b3f6a9dede1e"
+      },
+      "name": "Somapti Mondol",
+      "email": "somapti001@gmail.com",
+      "password": "123a569@A",
+      "phone": "01878141426",
+      "collageName": "Nakaihat Degree Collage",
+      "imgLink": "https://i.ibb.co/rvxsbS2/Somapti.jpg",
+      "class": "Eleven",
+      "subject": "ICT",
+      "fatherName": "Shamim Sarker",
+      "fatherContact": "01744583050",
+      "gOccupation": "Bussiness Man",
+      "isTeacher": false,
+      "isStudent": true,
+      "joinDate": "2024-07-20"
+    },
+    {
+        "_id": {
+          "$oid": "664e2c5c1676278df6bd6fda"
+        },
+        "name": "Shihab",
+        "code": "003",
+        "imgLink": "",
+        "fathersName": "Father Name 3",
+        "mothersName": "Mother Name 3",
+        "joinDate": "2024-07-20",
+        "sheetFeeStatus": "Unpaid",
+        "monthlyFeeStatus": "Unpaid",
+        "progress": "Excellent",
+        "behaviour": "Good",
+        "class": "Eight",
+        "schoolName": "Success Model School",
+        "schoolRoll": "3",
+        "Gender": "Male"
+      }
+      ,
+      {
+        "_id": {
+          "$oid": "664e2c5c1676278df6bd6fdd"
+        },
+        "name": "Mehedi",
+        "code": "006",
+        "imgLink": "https://i.ibb.co/b2BhM1k/IMG-20240417-225321-2.jpg",
+        "fathersName": "Father Name 6",
+        "mothersName": "Mother Name 6",
+        "joinDate": "2024-07-20",
+        "sheetFeeStatus": "Paid",
+        "monthlyFeeStatus": "Paid",
+        "progress": "Excellent",
+        "behaviour": "Good",
+        "class": "Eight",
+        "schoolName": "Success Model School",
+        "schoolRoll": "6",
+        "Gender": "Male"
+      }
+      ,
+      
+      {
+        "_id": {
+          "$oid": "664e2c5c1676278df6bd6fdd"
+        },
+        "name": "Riyad",
+        "code": "006",
+        "imgLink": "",
+        "fathersName": "Father Name 6",
+        "mothersName": "Mother Name 6",
+        "joinDate": "2024-07-20",
+        "sheetFeeStatus": "Paid",
+        "monthlyFeeStatus": "Paid",
+        "progress": "Excellent",
+        "behaviour": "Good",
+        "class": "Eight",
+        "schoolName": "Success Model School",
+        "schoolRoll": "6",
+        "Gender": "Male"
+      }
+
+    
+    
+    
+    
+  ]

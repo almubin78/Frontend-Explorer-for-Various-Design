@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.mySwiper {
+    overflow: hidden;
+  }
+
+
+  button:disabled {
+    background-color: gray; /* Change the background color */
+    cursor: not-allowed;    /* Show a not-allowed cursor */
+    opacity: 0.6;           /* Reduce opacity to indicate it's disabled */
+}

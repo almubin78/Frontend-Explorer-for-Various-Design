@@ -1,0 +1,287 @@
+[
+  {
+    "_id": {
+      "$oid": "669e430492a4832d9e7f0811"
+    },
+    "name": "Muyin",
+    "email": "muyin001@gmail.com",
+    "password": "123a569@A",
+    "phone": "01776145656",
+    "collageName": "SKS School And Collage",
+    "imgLink": "https://i.ibb.co/MBQdTbG/muyin.jpg",
+    "class": "Eleven",
+    "subject": "ICT",
+    "fatherName": "Mamun",
+    "fatherContact": "01772393637",
+    "gOccupation": "Bussiness Man",
+    "isTeacher": false,
+    "isStudent": true,
+    "joinDate": "2024-07-12"
+  },
+  {
+    "_id": {
+      "$oid": "669e4e99ba52b3f6a9dede1e"
+    },
+    "name": "Somapti Mondol",
+    "email": "somapti001@gmail.com",
+    "password": "123a569@A",
+    "phone": "01878141426",
+    "collageName": "Nakaihat Degree Collage",
+    "imgLink": "https://i.ibb.co/rvxsbS2/Somapti.jpg",
+    "class": "Eleven",
+    "subject": "ICT",
+    "fatherName": "Shamim Sarker",
+    "fatherContact": "01744583050",
+    "gOccupation": "Bussiness Man",
+    "isTeacher": false,
+    "isStudent": true,
+    "joinDate": "2024-07-20"
+  },
+  {
+    "_id": {
+      "$oid": "664e2c5c1676278df6bd6fdc"
+    },
+    "name": "Kawser",
+    "code": "005",
+    "imgLink": "",
+    "fathersName": "Father Name 5",
+    "mothersName": "Mother Name 5",
+    "joinDate": "2024-06-15",
+    "sheetFeeStatus": "Unpaid",
+    "monthlyFeeStatus": "Paid",
+    "progress": "Average",
+    "behaviour": "Average",
+    "class": "Eight",
+    "schoolName": "Success Model School",
+    "schoolRoll": "5",
+    "Gender": "Male"
+  },
+  {
+    "_id": {
+      "$oid": "664e2c5c1676278df6bd6fda"
+    },
+    "name": "Shihab",
+    "code": "003",
+    "imgLink": "",
+    "fathersName": "Father Name 3",
+    "mothersName": "Mother Name 3",
+    "joinDate": "2024-07-20",
+    "sheetFeeStatus": "Unpaid",
+    "monthlyFeeStatus": "Unpaid",
+    "progress": "Excellent",
+    "behaviour": "Good",
+    "class": "Eight",
+    "schoolName": "Success Model School",
+    "schoolRoll": "3",
+    "Gender": "Male"
+  },
+  {
+    "_id": {
+      "$oid": "664e2c5c1676278df6bd6fdd"
+    },
+    "name": "Mehedi",
+    "code": "006",
+    "imgLink": "https://i.ibb.co/b2BhM1k/IMG-20240417-225321-2.jpg",
+    "fathersName": "Father Name 6",
+    "mothersName": "Mother Name 6",
+    "joinDate": "2024-07-20",
+    "sheetFeeStatus": "Paid",
+    "monthlyFeeStatus": "Paid",
+    "progress": "Excellent",
+    "behaviour": "Good",
+    "class": "Eight",
+    "schoolName": "Success Model School",
+    "schoolRoll": "6",
+    "Gender": "Male"
+  },
+  {
+    "_id": {
+      "$oid": "664e2c5c1676278df6bd6fdd"
+    },
+    "name": "Riyad",
+    "code": "006",
+    "imgLink": "",
+    "fathersName": "Father Name 6",
+    "mothersName": "Mother Name 6",
+    "joinDate": "2024-07-20",
+    "sheetFeeStatus": "Paid",
+    "monthlyFeeStatus": "Paid",
+    "progress": "Excellent",
+    "behaviour": "Good",
+    "class": "Eight",
+    "schoolName": "Success Model School",
+    "schoolRoll": "6",
+    "Gender": "Male"
+  },
+  {
+    "_id": {
+      "$oid": "669e430492a4832d9e7f0812"
+    },
+    "name": "Md Borhan Mondol",
+    "email": "borhan001@gmail.com",
+    "password": "123a569@A",
+    "phone": "01723604660",
+    "collageName": "SKS School And Collage",
+    "imgLink": "https://i.ibb.co/KDhg3v7/borhan-2.png",
+    "class": "Eleven",
+    "subject": "ICT",
+    "fatherName": "Siddiqur Rahman",
+    "fatherContact": "01723604660",
+    "gOccupation": "Job",
+    "isTeacher": false,
+    "isStudent": true,
+    "joinDate": "2024-07-12"
+  },
+  {
+    "_id": {
+      "$oid": "669e4e99ba52b3f6a9dede1c"
+    },
+    "name": "Maliha Momtaz Luba",
+    "email": "luba001@gmail.com",
+    "password": "123a569@A",
+    "phone": "01734144141",
+    "collageName": "Nakaihat Degree Collage",
+    "imgLink": "https://i.ibb.co/C1zf4ZN/luba2.png",
+    "class": "Eleven",
+    "subject": "ICT",
+    "fatherName": "Mominul Islam Khandokar",
+    "fatherContact": "01718908999",
+    "gOccupation": "Bussiness Man",
+    "isTeacher": false,
+    "isStudent": true,
+    "joinDate": "2024-07-12"
+  },
+  {
+    "_id": {
+      "$oid": "669e430492a4832d9e7f0813"
+    },
+    "name": "Sidratul Muntaha Shithi",
+    "email": "shithi001@gmail.com",
+    "password": "123a569@A",
+    "phone": "01835691367",
+    "collageName": "Nakaihat Degree Collage",
+    "imgLink": "https://i.ibb.co/ChN22g9/shithi-2.png",
+    "class": "Eleven",
+    "subject": "ICT",
+    "fatherName": "Shamim Sarker",
+    "fatherContact": "01745123813",
+    "gOccupation": "Bussiness Man",
+    "isTeacher": false,
+    "isStudent": true,
+    "joinDate": "2024-07-16"
+  },
+  {
+    "_id": {
+      "$oid": "669e4e99ba52b3f6a9dede1d"
+    },
+    "name": "Nondita Sarker Medha",
+    "email": "medha001@gmail.com",
+    "password": "123a569@A",
+    "phone": "N/A",
+    "collageName": "Nakaihat Degree Collage",
+    "imgLink": "",
+    "class": "Eleven",
+    "subject": "ICT",
+    "fatherName": "",
+    "fatherContact": "0178499707",
+    "gOccupation": "Others",
+    "isTeacher": false,
+    "isStudent": true,
+    "joinDate": "2024-07-16"
+  },
+  {
+    "_id": {
+      "$oid": "664e2c5c1676278df6bd6fe4"
+    },
+    "name": "Riyad",
+    "code": "013",
+    "imgLink": "https://i.ibb.co/CbC9p17/bisakto.jpg",
+    "fathersName": "Father Name 13",
+    "mothersName": "Mother Name 13",
+    "joinDate": "2024-05-01",
+    "sheetFeeStatus": "Unpaid",
+    "monthlyFeeStatus": "Unpaid",
+    "progress": "Excellent",
+    "behaviour": "Good",
+    "class": "Eight",
+    "schoolName": "Success Model School",
+    "schoolRoll": "13",
+    "Gender": null
+  },
+  {
+    "_id": {
+      "$oid": "664e2c5c1676278df6bd6fe8"
+    },
+    "name": "Moursalin",
+    "code": "017",
+    "imgLink": "https://i.ibb.co/9NVNGRr/moursalin3.png",
+    "fathersName": "Father Name 17",
+    "mothersName": "Mother Name 17",
+    "joinDate": "2024-06-01",
+    "sheetFeeStatus": "Unpaid",
+    "monthlyFeeStatus": "Paid",
+    "progress": "Good",
+    "behaviour": "Average",
+    "class": "Eight",
+    "schoolName": "Success Model School",
+    "schoolRoll": "17",
+    "Gender": null
+  },
+  {
+    "_id": {
+      "$oid": "664e2c5c1676278df6bd6fdb"
+    },
+    "name": "Hridoy",
+    "code": "004",
+    "imgLink": "https://i.ibb.co/BqpPdsK/hridoy.png",
+    "fathersName": "Father Name 4",
+    "mothersName": "Mother Name 4",
+    "joinDate": "2024-07-12",
+    "sheetFeeStatus": "Paid",
+    "monthlyFeeStatus": "Paid",
+    "progress": "Good",
+    "behaviour": "Excellent",
+    "class": "Nine",
+    "schoolName": "Success Model School",
+    "schoolRoll": "4",
+    "Gender": "Male"
+  },
+  {
+    "_id": {
+      "$oid": "664e2c5c1676278df6bd6fdd"
+    },
+    "name": "Riyad",
+    "code": "006",
+    "imgLink": "",
+    "fathersName": "Father Name 6",
+    "mothersName": "Mother Name 6",
+    "joinDate": "2024-07-20",
+    "sheetFeeStatus": "Paid",
+    "monthlyFeeStatus": "Paid",
+    "progress": "Excellent",
+    "behaviour": "Good",
+    "class": "Eight",
+    "schoolName": "Success Model School",
+    "schoolRoll": "6",
+    "Gender": "Male"
+  },
+  {
+    "_id": {
+      "$oid": "66a47717aa34ad601a6d8be9"
+    },
+    "name": "Sima",
+    "email": "sima001@gmail.com",
+    "password": "123a569@A",
+    "phone": "",
+    "collageName": "Nakaihat Degree Collage",
+    "imgLink": "",
+    "class": "Eleven",
+    "subject": "ICT",
+    "fatherName": "Shamim Sarker",
+    "fatherContact": "",
+    "gOccupation": "Bussiness Man",
+    "isTeacher": false,
+    "isStudent": true,
+    "joinDate": "2024-07-26"
+  }
+]
