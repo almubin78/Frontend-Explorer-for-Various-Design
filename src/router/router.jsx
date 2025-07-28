@@ -15,14 +15,22 @@ const router = createBrowserRouter([
         path:'/',
         element:<Main/>,
         children:[
-            {
-                path:'/practiceOne',
-                element:<NavbarHome/>,
-                children:[
-                    {path:'/practiceOne/navbarOne',element:<StyleOneNav/>}
-                ]
+            // {
+            //     path:'/practiceOne',
+            //     element:<NavbarHome/>,
+            //     children:[
+            //         {path:'/practiceOne/navbarOne',element:<StyleOneNav/>}
+            //     ]
 
-            }
+            // },
+            // {
+            //     path:'/studyTest',
+            //     element:<NavbarHome/>,
+            //     children:[
+            //         {path:'/practiceOne/navbarOne',element:<StyleOneNav/>}
+            //     ]
+
+            // },
         ]
     },
     {
