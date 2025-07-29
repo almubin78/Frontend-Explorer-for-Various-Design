@@ -26,7 +26,7 @@ function App() {
 
   return (
     <div className="p-4">
-      <h1 className="text-2xl mb-2">Real-time Chat</h1>
+      <h1 className="text-2xl mb-2">Lets Chat</h1>
       <div className="space-y-1 mb-4">
         {chat.map((msg, i) => (
           <div key={i} className="bg-gray-200 p-2 rounded">{msg}</div>
