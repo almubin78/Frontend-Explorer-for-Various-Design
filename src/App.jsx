@@ -1,44 +1,94 @@
-// src/App.js
+// App.js
 import React, { useEffect, useState } from 'react';
 import { socket } from './socket';
 
 function App() {
+  const [username, setUsername] = useState('');
+  const [registered, setRegistered] = useState(false);
   const [message, setMessage] = useState('');
   const [chat, setChat] = useState([]);
 
   useEffect(() => {
-    // Listen for new messages
     socket.on('new_message', (data) => {
       setChat((prev) => [...prev, data]);
     });
 
-    return () => {
-      socket.off('new_message');
-    };
+    return () => socket.off('new_message');
   }, []);
 
+  const register = () => {
+    if (username.trim()) {
+      socket.emit('set_username', username);
+      setRegistered(true);
+    }
+  };
+
   const handleSend = () => {
-    if (message.trim() !== '') {
-      socket.emit('send_message', message);
+    if (message.trim()) {
+      const msg = { text: message };
+      socket.emit('send_message', msg);
       setMessage('');
     }
   };
 
-  return (
-    <div className="p-4">
-      <h1 className="text-2xl mb-2">Lets Chat</h1>
-      <div className="space-y-1 mb-4">
-        {chat.map((msg, i) => (
-          <div key={i} className="bg-gray-200 p-2 rounded">{msg}</div>
-        ))}
+  if (!registered) {
+    return (
+      <div className="p-4 max-w-md mx-auto">
+        <h2 className="text-xl mb-2">Enter your name</h2>
+        <input
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+          className="border p-2 w-full mb-2"
+          placeholder="Your name"
+        />
+        <button
+          onClick={register}
+          className="bg-blue-600 text-white px-4 py-2 rounded"
+        >
+          Join Chat
+        </button>
       </div>
-      <input
-        value={message}
-        onChange={(e) => setMessage(e.target.value)}
-        placeholder="Type message..."
-        className="border p-2 mr-2"
-      />
-      <button onClick={handleSend} className="bg-blue-500 text-white px-4 py-2 rounded">Send</button>
+    );
+  }
+
+  return (
+    <div className="p-4 max-w-md mx-auto">
+      <h1 className="text-2xl mb-4">Welcome, {username}</h1>
+
+      <div className="space-y-2 mb-4">
+        {chat.map((msg, i) => {
+          const isMe = msg.senderId === socket.id;
+          return (
+            <div
+              key={i}
+              className={`p-2 rounded max-w-[70%] ${
+                isMe
+                  ? 'bg-blue-500 text-white ml-auto text-right'
+                  : 'bg-gray-200 text-black mr-auto text-left'
+              }`}
+            >
+              <div className="text-sm font-bold">{msg.username}</div>
+              <div>{msg.text}</div>
+              <div className="text-xs mt-1">{msg.time}</div>
+            </div>
+          );
+        })}
+      </div>
+
+      <div className="flex">
+        <input
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+          className="border p-2 flex-1 mr-2"
+          placeholder="Type message..."
+        />
+        <button
+          onClick={handleSend}
+          className="bg-blue-600 text-white px-4 py-2 rounded"
+        >
+          Send
+        </button>
+      </div>
     </div>
   );
 }

@@ -4,13 +4,8 @@ import Main from "../components/Main";
 import NavbarHome from "../components/Sections/Navbars/NavbarHome";
 import StyleOneNav from "../components/Sections/Navbars/StyleOneNav";
 import DynamicHomePage from "../components/Pages/DynamicCard/DynamicHomePage";
-import ByJavascript from "../components/Pages/DynamicCard/ByJavascript";
+
 // Navbar
-
-
-
-
-
 
 const router = createBrowserRouter([
     {
