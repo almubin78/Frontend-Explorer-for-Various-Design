@@ -5,9 +5,9 @@ const { dbConnect } = require("./src/config/dbConnect");
 const http = require("http");
 const { Server } = require("socket.io");
 
-const server = http.createServer(app);
+const serverByApp = http.createServer(app);
 
-const io = new Server(server, {
+const newSocketIoServer = new Server(serverByApp, {
   cors: {
     origin: "*", // or specify your frontend URL
     methods: ["GET", "POST"],
@@ -22,8 +22,8 @@ app.get("/", (req, res) => {
   res.sendFile(join(__dirname, "./src/index.html"));
 });
 // Socket.IO Events
-// server.js
-io.on("connection", (socket) => {
+
+newSocketIoServer.on("connection", (socket) => {
   console.log("User connected:", socket.id);
 
   // Save username per socket
@@ -38,7 +38,8 @@ io.on("connection", (socket) => {
       username: socket.data.username || "Anonymous",
       time: new Date().toLocaleTimeString(),
     };
-    io.emit("new_message", message);
+    newSocketIoServer.emit("new_message", message);
+    console.log(message);
   });
 
   socket.on("disconnect", () => {
@@ -48,7 +49,7 @@ io.on("connection", (socket) => {
 
 // Server Listen
 const PORT = process.env.PORT || 5000;
-server.listen(PORT, () => {
+serverByApp.listen(PORT, () => {
   dbConnect();
   console.log(`Server running on port ${PORT}`);
 });
