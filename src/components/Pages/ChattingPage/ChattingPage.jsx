@@ -1,8 +1,7 @@
-// App.js
-import React, { useEffect, useState } from 'react';
-import { socket } from './socket';
+import  { useEffect, useState } from 'react';
+import { socket } from '../../../socket';
 
-function App() {
+const ChattingPage = () => {
   const [username, setUsername] = useState('');
   const [registered, setRegistered] = useState(false);
   const [message, setMessage] = useState('');
@@ -37,6 +36,7 @@ function App() {
         <h2 className="text-xl mb-2">Enter your name</h2>
         <input
           defaultValue={username}
+          // value={username}
           onChange={(e) => setUsername(e.target.value)}
           className="border p-2 w-full mb-2"
           placeholder="Your name"
@@ -91,6 +91,6 @@ function App() {
       </div>
     </div>
   );
-}
+};
 
-export default App;
+export default ChattingPage;
