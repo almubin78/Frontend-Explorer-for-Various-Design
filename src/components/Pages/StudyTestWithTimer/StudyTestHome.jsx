@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const StudyTestHome = () => {
   const [selectedBatch, setSelectedBatch] = useState("");
@@ -10,7 +10,7 @@ const StudyTestHome = () => {
   const [presentStudents, setPresentStudents] = useState([]);
 
   console.log({
-    selectedBatch,
+    selectedBatch ,
     batchQuestions,
     newTasks,
     currentQuestions,
@@ -19,11 +19,30 @@ const StudyTestHome = () => {
     presentStudents,
   });
 
-  //
+  //set student when batch changes
+  useEffect(()=>{
 
+  },[selectedBatch])
+
+  
+  //From Batch Selector
+  const handleSelectBatch = (event) => {
+    setSelectedBatch(event.target.value);
+  };
   return (
     <div>
-      <h2>This is Study Test Home</h2>
+
+      {/* From Batch Selector */}
+      <div className="batch-selector">
+        <label htmlFor="batch">Select Batch:</label>
+        <select id="batch" onChange={handleSelectBatch}>
+          <option value="">--Select a Batch--</option>
+          <option value="Ten">Ten</option>
+          <option value="Nine">Nine</option>
+          <option value="Eight">Eight</option>
+          <option value="Seven">Seven</option>
+        </select>
+      </div>
     </div>
   );
 };
