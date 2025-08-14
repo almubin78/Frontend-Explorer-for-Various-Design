@@ -10,10 +10,8 @@ const Main = () => {
       {/* Nav Aria */}
       <div>
         {[
-          { path: "/practiceOne", label: "Navbars" },
-          { path: "/practiceTwo", label: "Practice Area 2" },
-          { path: "/studyTest", label: "home work test" },
-          { path: "/dynamicPages", label: "Dynamic Card" },
+          { path: "/test", label: "Study Test" },
+          
         ].map((item) => (
           <NavLink
             key={item.path}
