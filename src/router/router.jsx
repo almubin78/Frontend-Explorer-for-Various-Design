@@ -1,7 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
 import ErrorPage from "../components/ErrorPage";
 import StudyTestHome from "../components/Pages/StudyTestWithTimer/StudyTestHome";
-import Chatting from "../components/Pages/StudyTestWithTimer/ChildComponents/Chatting";
+import Chatting from "../components/Pages/StudyTestWithTimer/ChildComponents/Chatting/Chatting";
+import TestHome from "../components/Pages/StudyTestWithTimer/ChildComponents/Test/TestHome";
 
 // Navbar
 
@@ -11,13 +12,11 @@ const router = createBrowserRouter([
         element:<StudyTestHome/>,
         // element:<Main/>,
         children:[
-            {path:'/test',element:<></>},
+            {path:'/test',element:<TestHome/>},
             {path:'/chat',element:<Chatting/>},
             {path:'/register',element:<></>},
             {path:'/feedback',element:<></>},
         ]
-           
-       
     },
     {
         path:'*',
