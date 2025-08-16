@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import AttendantList from "./ChildComponents/AttendantList";
 import QuestionPanel from "./ChildComponents/QuestionPanel";
 import BatchSelector from "./ChildComponents/BatchSelector";
+import NavbarForStudyTest from "./NavbarForStudyTest";
+import { Outlet } from "react-router-dom";
 
 const StudyTestHome = () => {
   const [selectedBatch, setSelectedBatch] = useState("");
@@ -12,17 +14,13 @@ const StudyTestHome = () => {
 
   },[selectedBatch])
 
-  
+  console.log('koire vai');
  
   return (
     <div>
-      <BatchSelector/>
-      <div className="attendantListArea">
-        <AttendantList />
-      </div>
-      <div className="QuestionsArea">
-        <QuestionPanel />
-      </div>
+      <NavbarForStudyTest/>
+      <Outlet/>
+      
 
       
       
