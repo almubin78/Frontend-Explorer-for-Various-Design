@@ -1,9 +1,10 @@
 
 
-const BatchSelector = () => {
+const BatchSelector = ({onBatchSelect}) => {
     const handleSelectBatch = (e)=>{
         e.preventDefault();
         console.log(e.target.value);
+        onBatchSelect(e.target.value)
     }
 
     return (

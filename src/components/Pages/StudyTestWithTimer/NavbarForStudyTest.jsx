@@ -19,7 +19,7 @@ const NavbarForStudyTest = () => {
                 </Link>))
                
             }
-            <li>jjjdfsd</li>
+           
         </div>
     );
 };
