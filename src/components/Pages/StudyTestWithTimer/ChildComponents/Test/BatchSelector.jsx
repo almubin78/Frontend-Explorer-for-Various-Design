@@ -1,6 +1,6 @@
 
-
-const BatchSelector = ({onBatchSelect}) => {
+//this component used in SettingForStudyTest Component
+const BatchSelector = ({onBatchSelect,buttonText}) => {
     const handleSelectBatch = (e)=>{
         e.preventDefault();
         console.log(e.target.value);
@@ -17,6 +17,9 @@ const BatchSelector = ({onBatchSelect}) => {
           <option value="Eight">Eight</option>
           <option value="Seven">Seven</option>
         </select>
+        <button>
+          {buttonText}
+        </button>
       </div>
     );
 };

@@ -4,7 +4,10 @@ import BatchSelector from "./BatchSelector";
 const SettingForStudyTest = ({selectedBatch,setSelectedBatch,buttonText}) => {
   return (
     <div>
-      <BatchSelector onBatchSelect ={setSelectedBatch}/>
+      <BatchSelector 
+      onBatchSelect ={setSelectedBatch}
+      buttonText = {buttonText}
+      />
     </div>
   );
 };
