@@ -1,21 +1,18 @@
-import { createBrowserRouter } from "react-router-dom";
-import ErrorPage from "../components/ErrorPage";
-import StudyTestHome from "../components/Pages/StudyTestWithTimer/StudyTestHome";
-import Chatting from "../components/Pages/StudyTestWithTimer/ChildComponents/Chatting/Chatting";
-import TestHome from "../components/Pages/StudyTestWithTimer/ChildComponents/Test/TestHome";
+
 
 // Navbar
+
+import { createBrowserRouter } from "react-router-dom";
+import StudyTestRoot from "../Pages/StudyTest/StudyTestRoot";
+import ErrorPage from "../Pages/ErrorPage";
 
 const router = createBrowserRouter([
     {
         path:'/',
-        element:<StudyTestHome/>,
-        // element:<Main/>,
+        element:<StudyTestRoot/>,
         children:[
-            {path:'/test',element:<TestHome/>},
-            {path:'/chat',element:<Chatting/>},
-            {path:'/register',element:<></>},
-            {path:'/feedback',element:<></>},
+            {},
+           
         ]
     },
     {
