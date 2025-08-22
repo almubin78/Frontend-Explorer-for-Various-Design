@@ -1,7 +1,9 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 
 const StudyTestRoot = () => {
+    const [selectedBatch, setSelectedBatch] = useState('');
+    const [batchStudents,setBatchStudents]=useState([])
     useEffect(()=>{
 
     },[])
