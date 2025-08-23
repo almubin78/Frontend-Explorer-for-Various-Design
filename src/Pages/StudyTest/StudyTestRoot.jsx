@@ -6,30 +6,38 @@ const StudyTestRoot = () => {
   const [selectedBatch, setSelectedBatch] = useState("Nine");
   const [batchStudents, setBatchStudents] = useState([]);
   const [presentStudents, setPresentStudents] = useState([]);
+  const [currentStudent, setCurrentStudent] = useState(null);
   //
-  
+
   useEffect(() => {
     if (selectedBatch && StudentInfoData[selectedBatch]) {
-      const batchStudents = StudentInfoData[selectedBatch];
-      setBatchStudents(batchStudents);
-      setPresentStudents(
-        batchStudents.map((student) => ({ ...student, present: true }))
-      );
+      const batchStudent = StudentInfoData[selectedBatch];
+      setBatchStudents(batchStudent);
+      //add present:true to each students
+      setPresentStudents(() => {
+        batchStudent.map((student) => ({ ...student, present: true }));
+      });
     }
   }, [selectedBatch]);
-  
 
-  //selectRandomStudent
-  const [answeredStudents, setAnsweredStudents] = useState([]);
+  const [answeredStudents, setAnsweredStudents] = useState(null);
 
   const selectRandomStudent = () => {
     const presentAndUnanswered = presentStudents
       .filter((student) => student.present)
       .filter((student) => !answeredStudents.some((s) => s.id === student.id));
-    // console.log("presentAndUnanswered==", presentAndUnanswered);
+
+    if (presentAndUnanswered.length === 0) {
+      setCurrentStudent(null);
+      return;
+    }
+    const randomIndex = Math.floor(Math.random() * presentAndUnanswered.length);
+    setCurrentStudent(presentAndUnanswered[randomIndex]);
   };
-  
-//   selectRandomStudent()
+
+  setAnsweredStudents((prev) => {
+    
+  });
 
   //selectRandomQuestions
 
@@ -44,10 +52,12 @@ const StudyTestRoot = () => {
   const confirmAttendanceAndStart = () => {};
   //filter out duplicate students
 
-  return <div>
-    <h1>This is StudyTest root file</h1>
-    <Outlet/>
-  </div>;
+  return (
+    <div>
+      <h1>This is StudyTest root file</h1>
+      <Outlet />
+    </div>
+  );
 };
 
 export default StudyTestRoot;

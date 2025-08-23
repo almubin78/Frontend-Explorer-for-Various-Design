@@ -23,9 +23,8 @@ const JustPractice = () => {
 
         }
     },[selectedBatch])
-    // console.log(studentData[selectedBatch]) ////passed
-    console.log('batch student=',batchStudent) 
-    console.log('present Students=',presentStudents) 
+   
+    
     return (<>
         this is for practice
     </>);
