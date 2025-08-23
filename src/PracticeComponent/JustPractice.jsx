@@ -1,28 +1,26 @@
-    const studentData = {
-        Nine:[{name:'Mofiz',age:30}],
-        Ten:[{name:'Alif',age:14},{name:'Shihab',age:15}]
-    }
+
 import React, { useEffect, useState } from 'react';
+import { studentsData } from '../data/allStudentsData';
+import { allClassesQuestionsData } from '../data/questionsData';
 
 const JustPractice = () => {
-    
-
     const [selectedBatch, setSelectedBatch] = useState('Ten');
-    const [batchStudent, setBatchStudent] = useState([]);
-    const [presentStudents, setPresentStudents] = useState([]);
-    useEffect(()=>{
-        if(selectedBatch && studentData[selectedBatch]){
-            const presentBatchStudents = studentData[selectedBatch];
-            setBatchStudent(presentBatchStudents);
-            setPresentStudents(
-                presentBatchStudents.map((student)=>({
-                 ...student,present:true
-                }))
-            )
+    const [batchStudents, setBatchStudents] = useState([]);
+    const [batchQuestions, setBatchQuestions] = useState([]);
 
+    useEffect(()=>{
+        if(selectedBatch && studentsData[selectedBatch]){
+            const batchStudents = studentsData[selectedBatch];
+            const batchQuestions = allClassesQuestionsData[selectedBatch];
+            setBatchStudents(batchStudents);
+            setBatchQuestions(batchQuestions)
 
         }
-    },[selectedBatch])
+    },[])
+
+    console.log(batchQuestions,batchStudents);
+    
+    
    
     
     return (<>

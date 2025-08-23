@@ -20,24 +20,9 @@ const StudyTestRoot = () => {
     }
   }, [selectedBatch]);
 
-  const [answeredStudents, setAnsweredStudents] = useState(null);
+  
 
-  const selectRandomStudent = () => {
-    const presentAndUnanswered = presentStudents
-      .filter((student) => student.present)
-      .filter((student) => !answeredStudents.some((s) => s.id === student.id));
-
-    if (presentAndUnanswered.length === 0) {
-      setCurrentStudent(null);
-      return;
-    }
-    const randomIndex = Math.floor(Math.random() * presentAndUnanswered.length);
-    setCurrentStudent(presentAndUnanswered[randomIndex]);
-  };
-
-  setAnsweredStudents((prev) => {
-    
-  });
+  
 
   //selectRandomQuestions
 
