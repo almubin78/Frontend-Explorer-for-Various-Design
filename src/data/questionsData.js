@@ -1,6 +1,14 @@
 export const allClassesQuestionsData = {
     Ten:[
-        {id:1,question:'5 N বল বলতে কী বুঝ?',},
-        {id:2,question:'কুলম্বের সূত্র বিবৃত কর।'}
+        {
+            A:[
+            {question:'তড়িৎ তীব্রতা কাকে বলে',answer:'তড়িৎ ক্ষেত্রের কোন বিন্দুতে '},
+            {question:'কুলম্ব বল কাকে বলে?',answer:'বিজ্ঞানি কুলম্ব যে সূত্র আবি......'},
+            
+        ],
+        B:[
+            {}
+        ]
+    }
     ]
 }
