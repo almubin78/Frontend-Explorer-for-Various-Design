@@ -1,25 +1,33 @@
 import { useEffect, useState } from "react";
-import { StudentInfoData } from "./datas/StudentInfoData/StudentsInfo";
+
 import { Outlet } from "react-router-dom";
+import { allClassesQuestionsData } from "../../data/questionsData";
+import { studentsData } from "../../data/allStudentsData";
 
 const StudyTestRoot = () => {
-  const [selectedBatch, setSelectedBatch] = useState("Nine");
+  const [selectedBatch, setSelectedBatch] = useState("Ten");
+  const [selectChapter, setselectChapter] = useState("SoundAndWave");
+  const [chapterQuestions, setChapterQuestions] = useState([]);
   const [batchStudents, setBatchStudents] = useState([]);
-  const [presentStudents, setPresentStudents] = useState([]);
+  const [addPresentStudents, setAddPresentStudents] = useState([]);
   const [currentStudent, setCurrentStudent] = useState(null);
   //
 
   useEffect(() => {
-    if (selectedBatch && StudentInfoData[selectedBatch]) {
-      const batchStudent = StudentInfoData[selectedBatch];
+    if (selectedBatch && studentsData[selectedBatch]) {
+      const batchStudent = studentsData[selectedBatch];
+      const batchQuestions = allClassesQuestionsData[selectChapter]
       setBatchStudents(batchStudent);
+      setChapterQuestions(batchQuestions)
       //add present:true to each students
-      setPresentStudents(() => {
-        batchStudent.map((student) => ({ ...student, present: true }));
-      });
+      setAddPresentStudents(
+        batchStudent.map((student)=>({...student,present:true}))
+      )
     }
-  }, [selectedBatch]);
-  
+  }, [selectedBatch,selectChapter]);
+// console.log(batchStudents,'==batchStudents');
+console.log(chapterQuestions,'==chapterQuestions');
+// console.log(addPresentStudents,'==addPresentStudents');
 
   
 
