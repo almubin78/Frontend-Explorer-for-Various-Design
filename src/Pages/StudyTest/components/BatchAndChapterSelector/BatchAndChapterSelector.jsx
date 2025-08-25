@@ -4,14 +4,21 @@ const BatchAndChapterSelector = ({ setSelectedBatch, setSelectChapter }) => {
 
  const handleChapter = (e) => {
     e.preventDefault();
-    console.log(e.target.value);
+    console.log('Chapter=',e.target.value);
+    
     setSelectChapter(e.target.value)
+ }; 
+ const handleBatch = (e) => {
+    e.preventDefault();
+    console.log('batch',e.target.value);
+    setSelectedBatch(e.target.value)
  }; 
   return (
     <div>
       <div className="batchSelection">
-        <select name="" id="">
-          <option value="Ten">Ten</option>
+        <select onChange={handleBatch} name="" id="">
+          <option value="Ten">দশম শ্রেণি</option>
+          <option value="Nine">নবম শ্রেণি</option>
         </select>
       </div>
       <div className="ChapterSelection">

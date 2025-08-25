@@ -4,9 +4,10 @@ import { Outlet } from "react-router-dom";
 import { allClassesQuestionsData } from "../../data/questionsData";
 import { studentsData } from "../../data/allStudentsData";
 import BatchAndChapterSelector from "./components/BatchAndChapterSelector/BatchAndChapterSelector";
+import QuestionsList from "./components/Qusetions/QuestionsList";
 
 const StudyTestRoot = () => {
-  const [selectedBatch, setSelectedBatch] = useState("Ten");
+  const [selectedBatch, setSelectedBatch] = useState("");
   const [selectChapter, setSelectChapter] = useState("");
   const [chapterQuestions, setChapterQuestions] = useState([]);
   const [batchStudents, setBatchStudents] = useState([]);
@@ -17,23 +18,19 @@ const StudyTestRoot = () => {
   useEffect(() => {
     if (selectedBatch && studentsData[selectedBatch]) {
       const batchStudent = studentsData[selectedBatch];
-      const batchQuestions = allClassesQuestionsData[selectChapter]
+      const batchQuestions = allClassesQuestionsData[selectChapter];
       setBatchStudents(batchStudent);
-      setChapterQuestions(batchQuestions)
+      setChapterQuestions(batchQuestions);
       //add present:true to each students
       setAddPresentStudents(
-        batchStudent.map((student)=>({...student,present:true}))
-      )
+        batchStudents.map((student) => ({ ...student, present: true }))
+      );
     }
-  }, [selectedBatch,selectChapter]);
-// console.log(batchStudents,'==batchStudents');
-console.log(chapterQuestions,'==chapterQuestions');
-console.log(selectChapter,'==selectChapter');
-// console.log(addPresentStudents,'==addPresentStudents');
-
-  
-
-  
+  }, [selectedBatch, selectChapter]);
+  // console.log(batchStudents,'==batchStudents');
+  console.log(chapterQuestions, "==chapterQuestions");
+  console.log(selectChapter, "==selectChapter");
+  // console.log(addPresentStudents,'==addPresentStudents');
 
   //selectRandomQuestions
 
@@ -51,10 +48,12 @@ console.log(selectChapter,'==selectChapter');
   return (
     <div>
       <h1>This is StudyTest root file</h1>
-      <BatchAndChapterSelector 
-       setSelectedBatch={setSelectedBatch}
-       setSelectChapter={setSelectChapter}
-       />
+      <BatchAndChapterSelector
+        setSelectedBatch={setSelectedBatch}
+        setSelectChapter={setSelectChapter}
+      />
+      
+      <QuestionsList questions={chapterQuestions}/>
       <Outlet />
     </div>
   );
