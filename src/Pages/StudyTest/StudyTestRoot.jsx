@@ -3,10 +3,11 @@ import { useEffect, useState } from "react";
 import { Outlet } from "react-router-dom";
 import { allClassesQuestionsData } from "../../data/questionsData";
 import { studentsData } from "../../data/allStudentsData";
+import BatchAndChapterSelector from "./components/BatchAndChapterSelector/BatchAndChapterSelector";
 
 const StudyTestRoot = () => {
   const [selectedBatch, setSelectedBatch] = useState("Ten");
-  const [selectChapter, setselectChapter] = useState("SoundAndWave");
+  const [selectChapter, setSelectChapter] = useState("");
   const [chapterQuestions, setChapterQuestions] = useState([]);
   const [batchStudents, setBatchStudents] = useState([]);
   const [addPresentStudents, setAddPresentStudents] = useState([]);
@@ -27,6 +28,7 @@ const StudyTestRoot = () => {
   }, [selectedBatch,selectChapter]);
 // console.log(batchStudents,'==batchStudents');
 console.log(chapterQuestions,'==chapterQuestions');
+console.log(selectChapter,'==selectChapter');
 // console.log(addPresentStudents,'==addPresentStudents');
 
   
@@ -49,6 +51,10 @@ console.log(chapterQuestions,'==chapterQuestions');
   return (
     <div>
       <h1>This is StudyTest root file</h1>
+      <BatchAndChapterSelector 
+       setSelectedBatch={setSelectedBatch}
+       setSelectChapter={setSelectChapter}
+       />
       <Outlet />
     </div>
   );
