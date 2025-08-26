@@ -16,19 +16,10 @@ const StudyTestRoot = () => {
    currentStudents
   } = useSessionManager();
 
-
-// console.log(
-//     selectedBatch,
-//     setSelectedBatch,
-//     selectedChapter,
-//     setSelectedChapter,
-//     batchQuestions,
-//     currentQuestions,
-//    fullBatchStudent);
-console.log(currentStudents);
+console.log('current students=',currentStudents);
   return (
     <div className="relative min-h-screen bg-gray-50 text-blue-600">
-       home page /root page
+       
        <SettingsPanel 
        selectedBatch={selectedBatch} 
        batchQuestions={batchQuestions}
@@ -36,6 +27,8 @@ console.log(currentStudents);
        setSelectedChapter={setSelectedChapter}
        
        />
+        {/* for test purpose */}
+       <button className="btn" onClick={selectRandomStudent}>Test Random Students `selectRandomStudent` </button>
     </div>
   );
 };

@@ -4,7 +4,7 @@ import BatchAndChapterSelector from '../BatchAndChapterSelector/BatchAndChapterS
 const SettingsPanel = ({ setSelectedBatch, setSelectChapter,setSelectedChapter,batchQuestions }) => {
     return (
         <div>
-            setting panal
+            
             <BatchAndChapterSelector
                 setSelectedBatch={setSelectedBatch}
                 setSelectChapter={setSelectChapter}

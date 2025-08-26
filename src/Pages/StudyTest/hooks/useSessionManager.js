@@ -6,47 +6,60 @@ export const useSessionManager = () => {
   // Batch and Chapter state
   const [selectedBatch, setSelectedBatch] = useState("");
   const [selectedChapter, setSelectedChapter] = useState("");
-// data state
+
+  // Data states
   const [batchQuestions, setBatchQuestions] = useState([]);
   const [fullBatchStudent, setFullBatchStudent] = useState([]);
-// for randomSelect Students
-  const [answeredStudents, setAnsweredStudents] = useState([]);
-  const [currentStudents, setCurrentStudents] = useState([]);
-  // useEffect
+
+  // Students states
+  const [answeredStudents, setAnsweredStudents] = useState([
+    { id: 3, name: "Mehedi", imgLink: "" },
+    { id: 4, name: "Shohel Rana", imgLink: "" },
+  ]);
+  const [currentStudent, setCurrentStudent] = useState(null);
+
+  // Load students & questions when batch/chapter changes
   useEffect(() => {
     if (selectedBatch && selectedChapter) {
-      const batch = allStudentsData[selectedBatch];
+      const batchStudents = allStudentsData[selectedBatch];
       const questions = allQuestionsData[selectedChapter];
-      setFullBatchStudent(batch.map((s)=>({...s,present:true})));
+
+      setFullBatchStudent(batchStudents.map((s) => ({ ...s, present: true })));
       setBatchQuestions(questions);
     }
   }, [selectedBatch, selectedChapter]);
 
-  // console.log(fullBatchStudent, "fullBatchStudent");
-  // console.log(batchQuestions, "batchQuestions");
+  // Select random student (call manually when needed)
+  const selectRandomStudent = () => {
+    const availableStudents = fullBatchStudent
+      .filter((s) => s.present)
+      .filter((p) => !answeredStudents.some((a) => a.id === p.id));
+    console.log('availableStudents.length==',availableStudents.length);
+    if (availableStudents.length === 0) {
+      setCurrentStudent(null); // no one left
+      return;
+    }
 
- const selectRandomStudent = () =>{
-  const availableStudents = fullBatchStudent
-  .filter((s)=>s.present)
-  .filter((p)=>console.log(p));
-  const randomStudents = fullBatchStudent[Math.floor(Math.random()*availableStudents.length)]
-  setCurrentStudents(randomStudents)
-  console.log(randomStudents);
- }
- if(currentStudents){
-  selectRandomStudent()
- }
+    const randomStudent =
+      availableStudents[Math.floor(Math.random() * availableStudents.length)];
+
+    setCurrentStudent(randomStudent);
+    console.log("Random student:", randomStudent);
+  };
+
   return {
-    // state
+    // State
     selectedBatch,
     setSelectedBatch,
-    // selectChapter,
     selectedChapter,
     setSelectedChapter,
     batchQuestions,
     fullBatchStudent,
+    answeredStudents,
+    setAnsweredStudents,
+    currentStudent,
+
+    // Functions
     selectRandomStudent,
-    currentStudents
-    
   };
 };
