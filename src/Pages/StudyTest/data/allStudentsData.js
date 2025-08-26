@@ -1,4 +1,4 @@
-export const studentsData = {
+export const allStudentsData = {
     Ten: [
     { id: 1, name: "Shihab", imgLink: "" },
     { id: 2, name: "Alif", imgLink: "" },

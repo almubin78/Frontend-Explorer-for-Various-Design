@@ -1,4 +1,4 @@
-export const allClassesQuestionsData = {
+export const allQuestionsData = {
     ChapterTen: [
         {
           question: "তড়িৎ তীব্রতা কাকে বলে",
