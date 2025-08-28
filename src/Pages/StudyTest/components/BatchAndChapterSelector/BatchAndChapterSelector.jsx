@@ -41,6 +41,7 @@ const BatchAndChapterSelector = ({ setSelectedBatch, setSelectedChapter, batchQu
             className="w-full px-4 py-2 rounded-lg border border-gray-300 bg-gray-50 text-gray-800 focus:ring-2 focus:ring-green-400 focus:border-green-400 transition"
           >
             <option value="">--Select Chapter--</option>
+            <option value="Motion">গতি</option>
             <option value="ChapterTen">স্থির তড়িৎ</option>
             <option value="SoundAndWave">শব্দ ও তরঙ্গ</option>
           </select>

@@ -13,8 +13,8 @@ export const useSessionManager = () => {
 
   // Students states
   const [answeredStudents, setAnsweredStudents] = useState([
-    { id: 3, name: "Mehedi", imgLink: "" },
-    { id: 4, name: "Shohel Rana", imgLink: "" },
+    // { id: 3, name: "Mehedi", imgLink: "" },
+    // { id: 4, name: "Shohel Rana", imgLink: "" },
   ]);
   const [currentStudent, setCurrentStudent] = useState(null);
 

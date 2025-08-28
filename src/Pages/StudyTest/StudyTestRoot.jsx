@@ -6,17 +6,15 @@ const StudyTestRoot = () => {
     // state
     selectedBatch,
     setSelectedBatch,
-    // selectChapter,
-    selectedChapter,
     setSelectedChapter,
     batchQuestions,
     currentQuestions,
    fullBatchStudent,
    selectRandomStudent,
-   currentStudents
+   currentStudent
   } = useSessionManager();
 
-console.log('current students=',currentStudents);
+console.log('current students=',currentStudent);
   return (
     <div className="relative min-h-screen bg-gray-50 text-blue-600">
        
@@ -29,6 +27,7 @@ console.log('current students=',currentStudents);
        />
         {/* for test purpose */}
        <button className="btn" onClick={selectRandomStudent}>Test Random Students `selectRandomStudent` </button>
+       <h1>Current Students: {currentStudent?.name}</h1>
     </div>
   );
 };
