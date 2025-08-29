@@ -46,6 +46,15 @@ export const useSessionManager = () => {
     setCurrentStudent(randomStudent);
     console.log("Random student:", randomStudent);
   };
+  const selectRandomQuestions = () => {
+    if (!selectedBatch || !allQuestionsData[selectedChapter]) return;
+    const shuffled = [...allQuestionsData[selectedChapter]].sort(
+      () => 0.5 - Math.random()
+    );
+    setBatchQuestions(shuffled.slice(0, 5));
+  };
+
+
 
   return {
     // State
