@@ -14,7 +14,7 @@ const StudyTestRoot = () => {
    currentStudent
   } = useSessionManager();
 
-console.log('current students=',currentStudent);
+console.log('current students=',currentStudent,'batchQuestions',batchQuestions);
   return (
     <div className="relative min-h-screen bg-gray-50 text-blue-600">
        

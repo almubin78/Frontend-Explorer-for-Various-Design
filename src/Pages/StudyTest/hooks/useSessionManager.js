@@ -21,11 +21,24 @@ export const useSessionManager = () => {
   // Load students & questions when batch/chapter changes
   useEffect(() => {
     if (selectedBatch && selectedChapter) {
-      const batchStudents = allStudentsData[selectedBatch];
-      const questions = allQuestionsData[selectedChapter];
+      const batchStudent = allStudentsData[selectedBatch];
+      setFullBatchStudent(batchStudent.map((s) => ({ ...s, present: true })));
+      //available students
+      const availableStudents = fullBatchStudent
+        .filter((s) => s.present)
+        .filter((p) => !answeredStudents.some((a) => a.id === p.id));
 
-      setFullBatchStudent(batchStudents.map((s) => ({ ...s, present: true })));
-      setBatchQuestions(questions);
+      // random students
+      const randomStudent =
+        availableStudents[Math.floor(Math.random() * availableStudents.length)];
+
+      setCurrentStudent(randomStudent);
+      // shuffled questions and set question
+      const shuffled = [...allQuestionsData[selectedChapter]].sort(
+        () => 0.5 - Math.random()
+      );
+      setBatchQuestions(shuffled.slice(0, 5));
+      // setBatchQuestions(questions)
     }
   }, [selectedBatch, selectedChapter]);
 
@@ -34,7 +47,7 @@ export const useSessionManager = () => {
     const availableStudents = fullBatchStudent
       .filter((s) => s.present)
       .filter((p) => !answeredStudents.some((a) => a.id === p.id));
-    console.log('availableStudents.length==',availableStudents.length);
+
     if (availableStudents.length === 0) {
       setCurrentStudent(null); // no one left
       return;
@@ -44,17 +57,8 @@ export const useSessionManager = () => {
       availableStudents[Math.floor(Math.random() * availableStudents.length)];
 
     setCurrentStudent(randomStudent);
-    console.log("Random student:", randomStudent);
+    // console.log("Random student:", randomStudent);
   };
-  const selectRandomQuestions = () => {
-    if (!selectedBatch || !allQuestionsData[selectedChapter]) return;
-    const shuffled = [...allQuestionsData[selectedChapter]].sort(
-      () => 0.5 - Math.random()
-    );
-    setBatchQuestions(shuffled.slice(0, 5));
-  };
-
-
 
   return {
     // State
