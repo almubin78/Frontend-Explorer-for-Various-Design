@@ -59,6 +59,18 @@ export const useSessionManager = () => {
     setCurrentStudent(randomStudent);
     // console.log("Random student:", randomStudent);
   };
+  const handleTimeUp = () => {
+    if (!currentStudent) return;
+    setAnsweredStudents((prev) => {
+      if (!prev.some((s) => s.id === currentStudent.id)) {
+        setNewTasks((prevTasks) => [
+          ...prevTasks,
+          { student: currentStudent.name, tasks: assignRandomTasks() },
+        ]);
+        return [...prev, currentStudent];
+      }
+      return prev;
+    });
 
   return {
     // State
