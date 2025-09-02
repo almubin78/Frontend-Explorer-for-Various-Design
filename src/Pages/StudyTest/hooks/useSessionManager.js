@@ -19,7 +19,8 @@ export const useSessionManager = () => {
       setAdditionalTask(allAdditionalTasks[selectedChapter])
 
     }
-  },[selectedBatch,selectedChapter])
+  },[selectedBatch,selectedChapter]);
+
 
 
   // console.log(markAsTrueForAllStudents,chapterQuestions);
@@ -28,6 +29,7 @@ export const useSessionManager = () => {
     setSelectedBatch,
     setSelectedChapter,
     //data's from here directly
+    selectedBatch,
     chapterQuestions,
     additionalTask,
     ////  random students

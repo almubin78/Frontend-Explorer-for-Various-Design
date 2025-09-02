@@ -7,13 +7,17 @@ const StudyTestRoot = () => {
     
     setSelectedBatch,
     setSelectedChapter,
+
     chapterQuestions,
     additionalTask,
+    currentStudent,
+    selectedBatch,
    selectRandomStudent,
-   currentStudent
   } = useSessionManager();
 
 console.log(additionalTask,'additional tasks');
+console.log(chapterQuestions,'chapterQuestions');
+console.log(selectedBatch,'selectedBatch');
   return (
     <div className="relative min-h-screen bg-gray-50 text-blue-600">
        
