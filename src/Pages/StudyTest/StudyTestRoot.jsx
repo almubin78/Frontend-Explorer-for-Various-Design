@@ -4,23 +4,21 @@ import { useSessionManager } from "./hooks/useSessionManager";
 const StudyTestRoot = () => {
   const {
     // state
-    selectedBatch,
+    
     setSelectedBatch,
     setSelectedChapter,
-    batchQuestions,
-    currentQuestions,
-   fullBatchStudent,
+    chapterQuestions,
+    additionalTask,
    selectRandomStudent,
    currentStudent
   } = useSessionManager();
 
-console.log('current students=',currentStudent,'batchQuestions',batchQuestions);
+console.log(additionalTask,'additional tasks');
   return (
     <div className="relative min-h-screen bg-gray-50 text-blue-600">
        
        <SettingsPanel 
-       selectedBatch={selectedBatch} 
-       batchQuestions={batchQuestions}
+       batchQuestions={chapterQuestions}
        setSelectedBatch={setSelectedBatch}
        setSelectedChapter={setSelectedChapter}
        

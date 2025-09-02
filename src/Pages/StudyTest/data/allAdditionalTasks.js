@@ -1,4 +1,4 @@
-export const additionalTasks = {
+export const allAdditionalTasks = {
     ChapterTen: [
         {
           question: "তড়িৎ তীব্রতা কাকে বলে",
