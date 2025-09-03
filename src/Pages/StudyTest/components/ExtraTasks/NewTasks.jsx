@@ -1,9 +1,13 @@
 import React from 'react';
 
-const NewTasks = () => {
+const NewTasks = ({additionalTask}) => {
     return (
         <div>
-            new task
+            {
+                additionalTask.map((t)=><p key={t.id}>
+                    {t.question}
+                </p>)
+            }
         </div>
     );
 };

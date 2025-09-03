@@ -7,12 +7,12 @@ const StudyTestRoot = () => {
     
     setSelectedBatch,
     setSelectedChapter,
-
+    
     chapterQuestions,
     additionalTask,
     currentStudent,
     selectedBatch,
-   selectRandomStudent,
+    selectRandomStudent,
   } = useSessionManager();
 
 console.log(additionalTask,'additional tasks');
@@ -25,6 +25,7 @@ console.log(selectedBatch,'selectedBatch');
        batchQuestions={chapterQuestions}
        setSelectedBatch={setSelectedBatch}
        setSelectedChapter={setSelectedChapter}
+       additionalTask={additionalTask}
        
        />
         {/* for test purpose */}

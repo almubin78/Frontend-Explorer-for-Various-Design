@@ -1,7 +1,7 @@
 import React from 'react';
 import BatchAndChapterSelector from '../BatchAndChapterSelector/BatchAndChapterSelector';
 
-const SettingsPanel = ({ setSelectChapter,setSelectedChapter,batchQuestions,setSelectedBatch }) => {
+const SettingsPanel = ({ setSelectChapter,setSelectedChapter,batchQuestions,setSelectedBatch,additionalTask }) => {
     return (
         <div>
             
@@ -10,6 +10,8 @@ const SettingsPanel = ({ setSelectChapter,setSelectedChapter,batchQuestions,setS
                 setSelectedChapter={setSelectedChapter}
                 batchQuestions={batchQuestions}
                 setSelectedBatch={setSelectedBatch}
+                additionalTask={additionalTask}
+
             />
         </div>
     );

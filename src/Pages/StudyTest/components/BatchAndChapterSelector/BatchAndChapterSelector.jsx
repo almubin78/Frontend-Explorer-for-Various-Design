@@ -1,7 +1,8 @@
 import React from "react";
 import QuestionsList from "../Qusetions/QuestionsList";
+import NewTasks from "../ExtraTasks/NewTasks";
 
-const BatchAndChapterSelector = ({ setSelectedBatch, setSelectedChapter, batchQuestions }) => {
+const BatchAndChapterSelector = ({ additionalTask,setSelectedBatch, setSelectedChapter, batchQuestions }) => {
   const handleChapter = (e) => {
     e.preventDefault();
     console.log("Chapter=", e.target.value);
@@ -54,6 +55,14 @@ const BatchAndChapterSelector = ({ setSelectedBatch, setSelectedChapter, batchQu
           <QuestionsList questions={batchQuestions} />
         </div>
       )}
+      {
+        additionalTask && (
+          <div className="additionalTaskArea">
+            <p>additional task</p>
+            <NewTasks additionalTask ={additionalTask}/>
+          </div>
+        )
+      }
     </div>
   );
 };

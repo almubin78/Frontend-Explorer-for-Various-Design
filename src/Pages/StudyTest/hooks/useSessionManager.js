@@ -25,7 +25,7 @@ export const useSessionManager = () => {
 
   // console.log(markAsTrueForAllStudents,chapterQuestions);
   return {
-    //////// from useEffect
+    //////// sending useState Function to use Other page
     setSelectedBatch,
     setSelectedChapter,
     //data's from here directly
