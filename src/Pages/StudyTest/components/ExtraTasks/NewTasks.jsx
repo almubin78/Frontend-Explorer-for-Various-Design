@@ -4,7 +4,7 @@ const NewTasks = ({additionalTask}) => {
     return (
         <div>
             {
-                additionalTask.map((t)=><p key={t.id}>
+                additionalTask?.map((t)=><p key={t.id}>
                     {t.question}
                 </p>)
             }
